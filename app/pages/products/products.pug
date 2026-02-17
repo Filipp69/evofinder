@@ -1,0 +1,101 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-product
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'image',
+          src: 'img/image-content/banner-products.jpg'
+        },
+        title: 'Ballistic Identification System (BIS) EVOFINDER®',
+        subtitle: 'BIS operates in various network environment (LAN/WAN) over TCP/IP protocols and is capable to acquire bullets and cartridge cases surface images from remote sites and send them to SAS, for example, applying VPN connection.',
+      })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title The Scanner
+        +contentCard({
+          text: [
+            'DAS is aimed at digitally objects surfaces recording – “virtual” objects creating – and saving them into the DB. DAS is based on specifically designed and patented (№2130628RU, №2155378RU, №2174251RU, №63556RU, №63478RU) scanning device performing digital “frame-fragment” input of the object under examination image into the DB.',
+            'The image of a bullet side surface or cartridge case bottom is recorded by “bands”. At that bullet rotates on its axis but cartridge case displaces perpendicular to the optical axis of the scanning device.',
+          ],
+          images: ['img/image-content/products-card-scanner.jpg'],
+          button: {
+            href: '/products-scanner.html',
+            text: 'Learn more'
+          },
+          class: 'content-card--reverse content-card--wide-image content-card--no-border'
+        })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title Production
+        +contentCard({
+          text: [
+            'All recording processes are fully automatized. DAS performs with all existing handgun firearm systems objects including calibers up to 20 mm for bullets and up to 22 mm diameter for cartridge-cases. The time of bullet side surface recording (3D image) for full evolvement of pristine bullet, caliber 9 mm, and cartridge case bottom surface (3D image), 10 mm diameter, is less than 2 min.',
+          ],
+          images: ['img/image-content/products-card-soft.jpg'],
+          button: {
+            href: '/products-soft.html',
+            text: 'Learn more'
+          },
+          class: 'content-card--wide-image content-card--no-border'
+        })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title software
+        .wrapper.software-wrapper
+          .card-navigation
+            img.card-navigation__image(src="img/image-content/software-1.png", alt="")
+            +button({
+              link: true,
+              href: '#',
+              text: 'SAS',
+              class: 'button--no-bg',
+              svgHref: '#icon-arrow-btn',
+              svgWidth: '37',
+              svgHeight: '37'
+            })
+          .card-navigation
+            img.card-navigation__image(src="img/image-content/software-2.png", alt="")
+            +button({
+              link: true,
+              href: '#',
+              text: 'DAS',
+              class: 'button--no-bg',
+              svgHref: '#icon-arrow-btn',
+              svgWidth: '37',
+              svgHeight: '37'
+            })
+          .card-navigation
+            img.card-navigation__image(src="img/image-content/software-3.png", alt="")
+            +button({
+              link: true,
+              href: '#',
+              text: 'EWS',
+              class: 'button--no-bg',
+              svgHref: '#icon-arrow-btn',
+              svgWidth: '37',
+              svgHeight: '37'
+            })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title development
+        +contentCard({
+          text: [
+            'The company provides different possibilities of the Evofinder® system high quality maintenance – from preventive visiting of the company’s specialists till remote support via Internet connection (obligatory during warranty period). The quality of the system support is our advantage and can be proved by references from the side of our customers – in Europe, America and worldwide.',
+            'Since all new Evofinder® soft-hardware versions maintain continuity previous versions can be replaced by new ones without information loss.',
+          ],
+          images: [
+            'img/image-content/products-card-dev-1.jpg',
+            'img/image-content/products-card-dev-2.jpg'
+          ],
+          button: {
+            href: '/products-scanner.html',
+            text: 'Learn more'
+          },
+          class: 'content-card--reverse content-card--wide-image content-card--some-img'
+        })

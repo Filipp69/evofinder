@@ -1,0 +1,37 @@
+mixin contactsCard(data)
+  .contacts-card
+    if data.title
+      h3.contacts-card__title.h3= data.title
+
+    if data.description
+      p.contacts-card__description= data.description
+
+    .contacts-card__list
+      if data.address
+        .contacts-card__item
+          svg.contacts-card__icon(width="24" height="24")
+            use(href="#icon-location")
+          .contacts-card__values
+            span.contacts-card__text= data.address
+
+      if data.phones
+        .contacts-card__item
+          svg.contacts-card__icon(width="24" height="24")
+            use(href="#icon-phone")
+          .contacts-card__values
+            each phone in data.phones
+              a.contacts-card__text(
+                href=`tel:${phone.replace(/[()^+\d]/g, '')}`
+              )= phone
+
+      if data.emails
+        .contacts-card__item
+          svg.contacts-card__icon(width="24" height="24")
+            use(href="#icon-email")
+          .contacts-card__values
+            each email in data.emails
+              a.contacts-card__text(
+                href=`mailto:${email}`
+              )= email
+
+

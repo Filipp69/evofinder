@@ -1,0 +1,29 @@
+.overlay(data-overlay="")
+
+.modal.modal--callback(data-modal="callback")
+    .modal__close(data-modal-close="")
+      svg(width="24" height="24")
+          use(href="#icon-cross")
+    .modal__container(data-scroll-container="" data-form="callback")
+        form.form.invalid(data-validate-modal="" data-form-body="")
+          .modal__descr
+            .modal__title
+              span.h2 Contacts
+            .modal__text
+              p Leave your details and our specialists will contact you.
+          .inputholder__wrapper
+            .inputholder.form__inputholder
+                input.inputholder__input(type="text" placeholder="First name" data-required="")
+
+            .inputholder.form__inputholder(data-custom-mask="")
+                input.inputholder__input(type="tel" placeholder="+7 (XXX) XXX-XX-XX" data-required="" data-mask-tel="")
+
+          .form__buttonholder(data-form-trigger="")
+            button.form__button.button.button--primary(disabled="" data-form-button="")
+                span Submit
+          include ../policy/policy.pug
+
+        .modal__thanks(data-form-thanks="")
+          .modal__thanks-wrapper
+              .modal__title
+                span.h3 Thank you!

@@ -1,0 +1,53 @@
+.banner {
+  position: relative;
+  height: 100%;
+  padding: 170px 0 40px;
+  border-bottom-left-radius: 78px;
+  border-bottom-right-radius: 78px;
+  overflow: hidden;
+  @include media(max, 991) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  @include media(max, 767) {
+    padding-top: 180px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  &__media {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.5);
+  }
+  &__title {
+    color: $color-white;
+    margin-bottom: 20px;
+    @include media(max, 767) {
+      margin-bottom: 10px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: $color-grey-light;
+    @include media(max, 991) {
+      font-size: 24px;
+    }
+    @include media(max, 767) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &:has(video) {
+    .banner__title {
+      color: $color-primary;
+    }
+    .banner__media {
+      filter: none;
+    }
+  }
+}

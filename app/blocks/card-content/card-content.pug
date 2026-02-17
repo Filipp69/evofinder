@@ -1,0 +1,21 @@
+mixin contentCard(data)
+  .content-card.wrapper(class=data.class)
+    .content-card__body
+      .content-card__text
+        each paragraph in data.text
+          p!= paragraph
+
+      if data.button
+        .content-card__action
+          a.content-card__button.button.button--primary.button--full(
+            href=data.button.href
+          )
+            span= data.button.text
+
+    .content-card__image-wrapper
+      if data.images
+        each image in data.images
+          .content-card__image
+            img(src=image, alt="")
+
+

@@ -1,0 +1,40 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-blog
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'image',
+          src: 'img/image-content/banner-blog.jpg'
+        },
+        title: 'Insights & Case Studies',
+        subtitle: 'Explore scientific articles, expert reviews, and real-world case studies showcasing the performance of Evofinder® in forensic ballistics.',
+      })
+    section.section.blog-hub
+      .container
+        .section-header
+              h1.h2.section-header__title our blogs
+        .wrapper.blog-hub__wrapper
+          .card-navigation
+            img.card-navigation__image(src="img/image/blog-hub-1.png", alt="")
+            +button({
+              link: true,
+              href: '/articles.html',
+              text: 'Articles',
+              class: 'button--no-bg',
+              svgHref: '#icon-arrow-btn',
+              svgWidth: '37',
+              svgHeight: '37'
+            })
+          .card-navigation
+            img.card-navigation__image(src="img/image/blog-hub-2.png", alt="")
+            +button({
+              link: true,
+              href: '/reports.html',
+              text: 'Reports',
+              class: 'button--no-bg',
+              svgHref: '#icon-arrow-btn',
+              svgWidth: '37',
+              svgHeight: '37'
+            })

@@ -1,0 +1,34 @@
+mixin banner(data)
+  .banner
+    if data.media && data.media.type === 'video'
+      video.banner__media(
+        autoplay
+        muted
+        playsinline
+        loop
+        preload="auto"
+        aria-hidden="true"
+      )
+        source(src=data.media.src type="video/mp4")
+
+    if data.media && data.media.type === 'image'
+      img.banner__media(
+        src=data.media.src
+        alt=data.media.alt || ''
+        loading="eager"
+      )
+
+    .container
+      .banner__content
+        .banner__title.h1
+          h1!= data.title
+
+        p.banner__subtitle= data.subtitle
+
+        if data.button
+          +button({
+            link: true,
+            href: data.button.href,
+            text: data.button.text,
+            class: data.button.class || 'button--primary',
+          })

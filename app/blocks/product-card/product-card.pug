@@ -1,0 +1,15 @@
+mixin productCard(data)
+  a.product-card
+    .product-card__text
+      .product-card__title
+        span Название КПД
+      .product-card__name
+        span Вкусаром Болонская
+    .product-card__text
+      .product-card__title
+        span Код для заказа
+      .product-card__code
+        span 50041418
+    .product-card__btn(href=data.link)
+        svg(width="40" height="40")
+          use(href="#icon-categories-btn")

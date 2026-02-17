@@ -1,0 +1,205 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  &__nav {
+    .nav__list {
+      @include media(max,991) {
+        flex-direction: column;
+        gap: 48px;
+      }
+    }
+
+    .nav__link {
+      @include media(max,991) {
+        width: fit-content;
+        display: block;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 1444px;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 9px 30px;
+    background-color: $color-grey-dark;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    @include media(max, 1280) {
+      gap: 16px;
+    }
+    @include media(max, 991) {
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      height: $header-height-mob;
+    }
+    @include media(max, 767) {
+      padding: 9px 20px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 8px;
+    @include media(max, 991) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  &__search {
+    background: #F5F5F5;
+    border-radius: 30px;
+    height: 40px;
+    padding: 9px 60px 9px 20px;
+    font-size: 18px;
+    width: 100%;
+  }
+  &__inputholder-search {
+    max-width: 329px;
+    @include media(max, 767) {
+      position: absolute;
+      top: -200%;
+      left: 0;
+      width: 100%;
+      max-width: unset;
+      padding: 10px 20px;
+      opacity: 0;
+      background-color: $color-grey-dark;
+      transition: top $transition, opacity $transition;
+      z-index: 100;
+      border-radius: 10px;
+
+
+      &.active {
+        top: calc($header-height + 16px);
+        opacity: 1;
+      }
+    }
+  }
+  &__search-btn {
+    display: none;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    cursor: pointer;
+    @include media(max,767) {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    padding: 26px 16px 32px;
+    opacity: 0;
+    background-color: $color-white;
+    transition: top $transition, opacity $transition;
+    z-index: -1;
+    pointer-events: none;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+
+    &.vis {
+      top: 42px;
+      opacity: 1;
+      z-index: 100;
+      pointer-events: all;
+    }
+  }
+  &__search-icon,
+  &__cross-icon {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      color: $color-grey-dark;
+      transform: translateY(-50%);
+      @include media(max,767) {
+        right: 34px;
+        transform: translateY(-50%);
+      }
+  }
+  &__cross-icon {
+    display: none;
+    cursor: pointer;
+    @include media(max,767) {
+      display: block;
+    }
+  }
+  &__search-icon {
+    @include media(max,767) {
+      display: none;
+    }
+  }
+}
+
+.search-result {
+  width: 100%;
+  max-height: 377px;
+  position: absolute;
+  top: 100%;
+  background-color: $color-grey-dark;
+  padding: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s $transition, transform 0.3s $transition;
+
+  @include media(max,767) {
+    top: calc(100% - 10px);
+    left: 0;
+    left: 0;
+    padding: 10px 20px 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    overflow-y: auto;
+    max-height: 341px;
+    padding-right: 34px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 9px 11px 11px;
+    border-radius: 7px;
+    color: $color-white;
+    @include hover {
+      background: $color-primary;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    line-height: 120%;
+  }
+  &__category {
+    font-size: 13px;
+    line-height: 120%;
+  }
+}

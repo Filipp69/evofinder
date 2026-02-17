@@ -1,0 +1,10 @@
+mixin CardBlog(data)
+  .card-blog
+    img.card-blog__image(src=data.img, alt=data.title)
+    .card-blog__content
+      h3.card-blog__title.h3
+        = data.title
+      p.card-blog__text
+        = data.text
+    a.button.button--full.button--primary.card-blog__btn(href=data.link)
+      span Read more

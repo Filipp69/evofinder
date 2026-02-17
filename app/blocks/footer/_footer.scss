@@ -1,0 +1,106 @@
+.footer {
+  &__section {
+    background-color: $color-grey-dark;
+    color: $color-white;
+    border-top-right-radius: 78px;
+    border-top-left-radius: 78px;
+    max-width: 1444px;
+    margin: 0 auto;
+    @include media(max, 1280) {
+      border-top-right-radius: 60px;
+      border-top-left-radius: 60px;
+    }
+
+    @include media(max, 767) {
+      border-top-right-radius: 40px;
+      border-top-left-radius: 40px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include media(max, 767) {
+      gap: 40px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    @include media(max, 1280) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    @include media(max, 767) {
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 163px;
+    @include media(max, 1280) {
+      margin-bottom: 8px;
+    }
+    @include media(max, 767) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 132px;
+    @include media(max, 1280) {
+      gap: 30px;
+    }
+    @include media(max, 767) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    color: $color-white;
+    font-size: 16px;
+    &:first-child {
+      font-size: 18px;
+      text-decoration: underline;
+    }
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    @include hover {
+      color: $color-primary;
+    }
+    @include media(max, 1280) {
+      color: $color-grey-light;
+    }
+  }
+
+  &__button {
+    padding: 14px 67px;
+    font-size: 16px;
+    margin-left: 20px;
+    @include media(max, 1280) {
+      margin-left: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__copyright {
+    @include media(max, 1280) {
+      max-width: 226px;
+      color: $color-grey-light;
+    }
+  }
+}

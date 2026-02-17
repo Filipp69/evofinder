@@ -1,0 +1,195 @@
+.nav {
+  position: relative;
+
+  @include media(max, 991) {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    top: -100%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 0 20px 100px;
+    background-color: $color-grey-dark;
+    transition: all 0.3s ease;
+    z-index: 1;
+    overflow-y: auto;
+
+    &.vis {
+      visibility: visible;
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  &__logo {
+    display: none;
+    @include media(max, 991) {
+      display: block;
+      margin: auto auto 0;
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 30px;
+    @include media(max, 1280) {
+      gap: 10px;
+    }
+    @include media(max, 991) {
+      flex-direction: column;
+      width: fit-content;
+      margin: 218px 0 40px;
+    }
+    .nav__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-white;
+
+      @include media(max, 991) {
+        font-size: 36px;
+        line-height: 100%;
+      }
+
+      .nav__link.is-active,
+      .nav__link__sub.is-active {
+        font-weight: 600;
+      }
+
+      .nav__icon {
+        color: $color-primary;
+        transition: transform $transition;
+        @include media(max, 991) {
+          color: $color-white;
+        }
+      }
+
+      .nav__icon.flipped {
+        transform: scaleY(-1);
+      }
+
+      @include hover {
+          color: $color-primary;
+      }
+
+      .nav__list__sub {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        left: -20px;
+        top: 100%;
+        background: $color-grey-dark;
+        padding: 25px 20px 20px;
+        width: max-content;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: opacity $transition, visibility $transition;
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
+
+        @include media(max, 991) {
+          position: static;
+          transform: translateY(0);
+          padding: 10px 0;
+          width: 100%;
+          background: transparent;
+        }
+
+        .nav__item__sub {
+          &.active {
+            .nav__link__sub {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+          .nav__link__sub {
+            color: $color-white;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -2px;
+              width: 0;
+              height: 2px;
+              background-color: $color-primary;
+              transition: width $transition;
+            }
+            @include hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  @include media(max, 991) {
+    .nav__list {
+      .nav__item {
+        .nav__list__sub {
+          display: none;
+          position: static;
+          transform: translateY(0);
+          padding: 10px 0;
+          width: 100%;
+          background: transparent;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity $transition, visibility $transition;
+
+          &.visible {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .nav__item__sub {
+            .nav__link__sub {
+              color: $color-white;
+              position: relative;
+              font-size: 32px;
+              padding-left: 32px;
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 1px;
+                background-color: $color-primary;
+                transition: width $transition;
+              }
+              @include hover {
+                &::after {
+                  content: "";
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

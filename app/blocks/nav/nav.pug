@@ -1,0 +1,14 @@
+mixin nav(list)
+    nav.nav(data-header-menu="")&attributes(attributes)
+        ul.nav__list
+            each item in list
+                li.nav__item&attributes(item.attributes)
+                    a.nav__link(href=item.href)= item.title
+                    if (item.sub && item.sub.length > 0)
+                        svg.nav__icon(width="16" height="16")
+                          use(href='#icon-dropdown')
+                        ul.nav__list__sub
+                            each subitem in item.sub
+                                li.nav__item__sub&attributes(subitem.attributes)
+                                    a.nav__link__sub(href=subitem.href)= subitem.title
+        +logo("logo.png")(class="nav__logo")

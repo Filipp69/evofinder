@@ -1,0 +1,51 @@
+//theme
+@import "var";
+@import "mixin";
+@import "typography";
+
+//general
+@import "fonts";
+@import "general";
+
+//blocks
+// @import "breadcrumbs/_breadcrumbs";
+@import 'swiper/_swiper';
+@import "burger/_burger";
+@import "banner/_banner";
+@import "fields/_fields";
+@import "button/_button";
+@import "logo/_logo";
+@import "nav/_nav";
+@import "header/_header";
+@import "modal/_modal";
+@import "footer/_footer";
+// @import "cookie/_cookie";
+// @import 'social/_social';
+@import 'policy/_policy';
+@import 'card-content/_card-content';
+@import 'card-technology/_card-technology';
+@import 'card-blog/_card-blog';
+@import 'contacts-card/_contacts-card';
+@import 'product-card/_product-card';
+// @import 'pagination/_pagination';
+
+//pages
+@import 'index/_main.scss';
+@import 'contacts/_contacts.scss';
+@import 'blog/_blog.scss';
+@import 'products/_products.scss';
+@import 'about/_about.scss';
+
+//components
+//@import 'components/select/_select';
+// @import 'components/checkbox/_checkbox';
+//@import 'components/radio/_radio';
+//@import 'components/password-toggle/_password-toggle';
+//@import 'components/rating/_rating';
+// @import 'components/accordion/_accordion';
+// @import 'components/tabs/_tabs';
+//@import 'components/map/_map';
+//@import 'components/counter/_counter';
+//@import 'components/tooltip/_tooltip';
+//@import 'components/scroll-top/_scroll-top';
+//@import 'components/pagination/_pagination';

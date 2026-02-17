@@ -1,0 +1,8 @@
+.contacts {
+  &__wrapper {
+    @include media(max, 1280) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}

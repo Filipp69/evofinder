@@ -1,0 +1,230 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-main
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'video',
+          src: 'img/image-content/banner.mp4'
+        },
+        title: 'The ScannBI<br>Technology<br>company',
+        subtitle: 'We have unique more than 20 year experience in creating an effective tool for ballistic expertise — from initial idea to operating units',
+        button: {
+          href: '#product',
+          text: 'More information'
+        }
+      })
+    section.section
+      .container
+        .section-header
+          h2.h2.section-header__title product
+          p.section-header__text Ballistic Identification System (BIS) EVOFINDER includes three main integral parts: Specimen Analysis System (SAS), Data Acquisition Station (DAS) and Expert Working Station (EWS) – united into a single network.
+        .wrapper.wrapper-product
+          .card-navigation
+              img.card-navigation__image(src="img/image-content/product-0.png", alt="")
+              +button({
+                link: true,
+                href: '#',
+                text: 'Hardware',
+                class: 'button--no-bg',
+                svgHref: '#icon-arrow-btn',
+                svgWidth: '37',
+                svgHeight: '37'
+              })
+          .card-product-navigation
+            h3.h3.card-product-navigation__title Software
+            .card-product-navigation__wrapper
+              .card-navigation
+                img.card-navigation__image(src="img/image-content/software-1.png", alt="")
+                +button({
+                  link: true,
+                  href: '#',
+                  text: 'SAS',
+                  class: 'button--no-bg',
+                  svgHref: '#icon-arrow-btn',
+                  svgWidth: '37',
+                  svgHeight: '37'
+              })
+              .card-navigation
+                img.card-navigation__image(src="img/image-content/software-2.png", alt="")
+                +button({
+                  link: true,
+                  href: '#',
+                  text: 'DAS',
+                  class: 'button--no-bg',
+                  svgHref: '#icon-arrow-btn',
+                  svgWidth: '37',
+                  svgHeight: '37'
+              })
+              .card-navigation
+                img.card-navigation__image(src="img/image-content/software-3.png", alt="")
+                +button({
+                  link: true,
+                  href: '#',
+                  text: 'EWS',
+                  class: 'button--no-bg',
+                  svgHref: '#icon-arrow-btn',
+                  svgWidth: '37',
+                  svgHeight: '37'
+              })
+    section.section
+      .container
+        .section-header
+          h2.h2.section-header__title How it works
+        .wrapper.wrapper-how
+          .card-how
+            .card-how__heading
+              svg.card-how__icon(width="64" height="64")
+                use(href="#icon-block")
+              h3.h3.card-how__title No need for Centralized DB
+            .card-how__text
+              p A distributed database is more effective and less time-consuming for obtaining final results. Constant connection to a centralized DB causes inconvenience in daily system operation.
+          .card-how
+            .card-how__heading
+              svg.card-how__icon(width="64" height="64")
+                use(href="#icon-target")
+              h3.h3.card-how__title Targeted lab connections
+            .card-how__text
+              p Users can connect to specific labs (servers) based on the location and context of a criminal case, increasing the effectiveness of ballistic examination. Investigations show that weapons typically migrate within several hundred kilometers, making nearby labs most relevant, especially if they are not separated by patrolled borders.
+          .card-how
+            .card-how__heading
+              svg.card-how__icon(width="64" height="64")
+                use(href="#icon-switch")
+              h3.h3.card-how__title Fast and easy switching
+            .card-how__text
+              p Switching to a remote server takes only seconds, like browsing a website. This allows short-term data analysis sessions between systems at a convenient time and on agreed terms, without overloading network lines or server capacities.
+
+    section.section
+      .container
+        .section-header
+          h2.h2.section-header__title technology
+        .wrapper.technology-video-wrapper
+          .technology-video
+            video.technology-video__media(
+              src="img/image-content/banner.mp4"
+              controls
+              playsinline
+            )
+            img.technology-video__preview(src="img/image-content/video-preview.jpg", alt="")
+            svg.technology-video__btn-play(width="65" height="65")
+                use(href="#icon-video-play")
+
+          .technology-video-card
+            .technology-video-card__list
+              .technology-video-card__item
+                h4.technology-video-card__title EVOFINDER ENFSI 2016
+                p.technology-video-card__text Statistical estimiation of search effectiveness presentation
+
+              .technology-video-card__item
+                h4.technology-video-card__title EVOFINDER ENFSI 2017
+                p.technology-video-card__text Bullet search effectiveness - Automatic hits detection
+
+            a.technology-video-card__button.button.button--primary.button--full(href="#")
+              span More information
+
+    section.section.projects-slider
+      .container
+        .section-header
+          h2.h2.section-header__title Completed projects
+        +swiper("swiper-projects", "sliderProjects")
+          .swiper-slide
+            .card-projects
+              img.card-projects__image(src="img/image-content/projects-slider-3.jpg", alt="")
+              .card-projects__content
+                h3.h3.card-projects__title Odyssey Project, Germany 2010
+                p.card-projects__text The idea of the experiment was to inspect and compare some existing technologies for The idea of the experiment was to inspect and compare some existing technologies for...
+          .swiper-slide
+            .card-projects
+              img.card-projects__image(src="img/image-content/projects-slider-2.jpg", alt="")
+              .card-projects__content
+                h3.h3.card-projects__title Project name, USA 2010
+                p.card-projects__text Cursus ornare amet et ornare dolor faucibus. Vitae eget dapibus nisi sit ipsum dolor null.
+          .swiper-slide
+            .card-projects
+              img.card-projects__image(src="img/image-content/projects-slider-3.jpg", alt="")
+              .card-projects__content
+                h3.h3.card-projects__title Odyssey Project, Germany 2010
+                p.card-projects__text The idea of the experiment was to inspect and compare some existing technologies for The idea of the experiment was to inspect and compare some existing technologies for...
+        +button({
+              link: true,
+              href: '#',
+              text: 'More information',
+              class: 'button--primary projects-slider__button',
+            })
+
+    section.section
+      .container
+        .section-header
+          h2.h2.section-header__title About us
+        .wrapper.about-us
+            .about-us__content
+              .about-us__stats
+                h5.about-us__title 30+
+                p.about-us__text Years of Expertise. The project began in 1994, marking over 30 years of continuous development in ballistic identification systems.
+              .about-us__stats
+                h5.about-us__title 10+
+                p.about-us__text Software Versions Released. Over 10 software versions have been launched and supported — from version 5.1 (2010) to version 6.7 (current).
+              .about-us__stats
+                h5.about-us__title 3
+                p.about-us__text Generations of Scanners. Multiple hardware models released, including Evofinder 4X4, Forte Edition, and the original Evofinder.
+
+            .about-us__media
+              .about-us__grid
+
+                .about-us__image.about-us__image--big
+                  img(src="img/image-content/about-big.png" alt="")
+
+                .about-us__image.about-us__image--small
+                  img(src="img/image-content/about-1-1.jpg" alt="")
+
+                .about-us__image.about-us__image--small
+                  img(src="img/image-content/about-2.jpg" alt="")
+
+                .about-us__image.about-us__image--small
+                  img(src="img/image-content/about-3.jpg" alt="")
+
+              a.button.button--primary.button--full.about-us__button(href="/about.html")
+                span More about us
+
+
+    section.section
+      .container
+        .section-header
+          h2.h2.section-header__title Contacts
+          span.section-header__subtitle Our offices
+        .contacts
+          .wrapper.contacts__wrapper
+            +contactsCard({
+              title: 'North America partner',
+              description: 'Leeds Precision Instruments, Inc., d/b/a Leeds Forensics Systems, Inc.',
+              address: '17300 Medina Road, Suite 600 Minneapolis, MN 55447 USA',
+              phones: [
+                '+1-763-398-7136',
+                '+1-763-546-8575'
+              ],
+              emails: ['nschrode@leedsmicro.com']
+            })
+            +contactsCard({
+              title: 'Portugal partner',
+              description: 'ScannBI Technology Europe Unip Lda',
+              address: 'Rua Jaime Cortesão 186, 4440-662 Valongo, Portugal',
+              phones: [
+                '+351 224 222 589',
+                '+351 916 587 539'
+              ],
+              emails: ['m.schrodel@evofinder.com']
+            })
+            +contactsCard({
+              title: 'Germany partner',
+              description: 'ScannBI Technology Service GmbH',
+              address: 'Sandstrasse 17-23, 23552 Lübeck, Germany',
+              phones: [
+                '+49(0) 451 707 80 447',
+                '+49(0) 173 762 84 86'
+              ],
+              emails: [
+                'scannbi_service@evofinder.com',
+                'scannbi_spb@evofinder.com'
+              ]
+            })

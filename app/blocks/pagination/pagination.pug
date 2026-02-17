@@ -1,0 +1,17 @@
+.section-pagination
+  .pagination
+    button.pagination__arrow.pagination__arrow--left(disabled)
+      svg(width="43" height="43")
+        use(href="#icon-arrow")
+
+    ul.pagination__list
+      li
+        a.pagination__item.active 1
+      li
+        a.pagination__item 2
+      li
+        a.pagination__item 3
+
+    button.pagination__arrow.pagination__arrow--right
+      svg(width="43" height="43")
+        use(href="#icon-arrow-right")

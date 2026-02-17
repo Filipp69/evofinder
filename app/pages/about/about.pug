@@ -1,0 +1,62 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-about
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'video',
+          src: 'img/image-content/banner.mp4'
+        },
+        title: 'evofinder ABI',
+        subtitle: 'The ScannBI Technology company was founded by a group of specialists with more than 20 years experience of creating an effective tool for ballistic expertise.',
+        button: {
+          href: '#',
+          text: 'More information'
+        }
+      })
+    section.section
+      .container
+        +contentCard({
+          text: [
+            '<strong>EVOFINDER®</strong> system development began in 1994, when a team of engineers sets out to create a ballistic identification system. The goal was to record high-quality images of objects“ surfaces for computer analysis. Early prototypes using linear CCD cameras and incandescent lighting failed to deliver the needed quality and speed. ',
+            'In 1998, the team developed the CONDOR® system prototype using advanced scanning and lighting technologies, enabling high-resolution digital imaging. By 2000, the CONDOR® brand name was created from the initials of the original team members. In 2006, the creators formed a separate company to further develop the technology. They introduced a new system, EVOFINDER®, which retained compatibility with CONDOR® while offering improved capabilities.',
+            'The name EVOFINDER combines “evidence” and “finder”, reflecting its core purpose in ballistic investigations.'
+          ],
+          images: ['img/image-content/about-1.jpg'],
+          class: 'content-card--no-border'
+        })
+    section.section
+      .container
+        .section-header
+              h1.h2.section-header__title media about us
+        +swiper("swiper-about", "sliderAbout")
+          .swiper-slide
+            +CardBlog({
+              img: 'img/image-content/about-slider-1.jpg',
+              title: 'Vestibulum eget fringilla enim Vestibulum eget fringilla enim...',
+              text: 'Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros...',
+              link: '#'
+            })
+          .swiper-slide
+            +CardBlog({
+              img: 'img/image-content/about-slider-2.jpg',
+              title: 'Sed accumsan metus non ultricies Sed accumsan metus non ultricies....',
+              text: 'Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros...',
+              link: '#'
+            })
+          .swiper-slide
+            +CardBlog({
+              img: 'img/image-content/about-slider-3.jpg',
+              title: 'Integer finibus nisl a est lobortis, sed Integer finibus nisl a est lobortis, sed....',
+              text: 'Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros...',
+              link: '#'
+            })
+          .swiper-slide
+            +CardBlog({
+              img: 'img/image-content/about-slider-3.jpg',
+              title: 'Integer finibus nisl a est lobortis, sed Integer finibus nisl a est lobortis, sed....',
+              text: 'Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros Integer vitae lacus justo. Vestibulum non felis eget diam faucibus pellentesque at a eros...',
+              link: '#'
+            })
+

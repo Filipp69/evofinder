@@ -1,0 +1,25 @@
+mixin button(data)
+    - var href = data.href || '#'
+    - var svgHref = data.svgHref || null
+    - var svgWidth = data.svgWidth || '24'
+    - var svgHeight = data.svgHeight || '24'
+    - var text = data.text || ''
+    - var cls = data.class || ''
+
+    - var attrs = {}
+    each val, key in data
+        if !['text','link','button','svgHref','svgWidth','svgHeight','class','href'].includes(key)
+            - attrs[key] = val
+
+    if data.link
+        a.button(class=cls, href=href)&attributes(attrs)
+            span= text
+            if svgHref
+                svg(width=svgWidth, height=svgHeight)
+                    use(href=svgHref)
+    else
+        button.button(class=cls, type="button")&attributes(attrs)
+            span= text
+            if svgHref
+                svg(width=svgWidth, height=svgHeight)
+                    use(href=svgHref)

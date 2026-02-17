@@ -1,0 +1,12 @@
+mixin cardTechnology(data)
+  .card-technology(class=data.class)
+    .card-technology__image
+      img(src=data.image, alt="")
+
+    .card-technology__content
+      .card-technology__heading
+        span.card-technology__number= data.number
+        h3.card-technology__title.h3= data.title
+
+      if data.text
+        p.card-technology__text= data.text

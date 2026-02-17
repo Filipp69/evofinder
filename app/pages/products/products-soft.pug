@@ -1,0 +1,71 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-product-detail
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'image',
+          src: 'img/image-content/banner-products-software.jpg'
+        },
+        title: 'EVOFINDER SOFTWARE',
+        subtitle: 'Advanced software for ballistic evidence imaging and identification. Designed to support fast, accurate forensic analysis.  Built on decades of expertise, it helps forensic experts quickly find matches in vast databases, supporting criminal investigations with precision and speed.',
+      })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title how it works
+        +contentCard({
+          text: [
+            'Ballistic Identification System (BIS) EVOFINDER® includes three main integral parts: <a href="#">Specimen Analysis System (SAS)</a>, <a href="#">Data Acquisition Station (DAS)</a> and <a href="#">Expert Working Station (EWS)</a> – united into a single network.',
+            'The number of <a href="#">DAS</a> and <a href="#">EWS</a> can be defined by customer according to demands since BIS allows more than two operators to work simultaneously including image acquisition and ballistic analysis.',
+            'BIS EVOFINDER® operates in various network environment (LAN/WAN) over TCP/IP protocols and is capable to acquire bullets and cartridge cases surface images from remote sites and send them to <a href="#">SAS</a>, for example, applying VPN connection.'
+          ],
+          images: ['img/image-content/products-software-card.jpg'],
+        })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title 3d technology
+        .wrapper
+          +cardTechnology({
+            number: '01',
+            title: 'Data capture with frame-fragment method',
+            text: 'The system scans ballistic objects using the frame-fragment method combined with focus variation microscopy, capturing high-resolution surface data with optical precision.',
+            image: 'img/image-content/products-card-scanner.jpg'
+          })
+          +cardTechnology({
+            number: '02',
+            title: '3D Surface Reconstruction',
+            text: 'Innovative technologies like Floating Frame and Multi-Illumination analyze the surface to define 3D coordinates with submicron accuracy, creating a detailed 3D model.',
+            image: 'img/image-content/products-card-soft.jpg'
+          })
+          +cardTechnology({
+            number: '03',
+            title: 'Visualization & Correlation Enhancement',
+            text: 'The 3D surface is displayed for manual inspection and used to enhance 2D image contrast, improving automatic correlation results by up to 20%.',
+            image: 'img/image-content/products-card-soft-1.jpg'
+          })
+    section.section
+      .container
+        .section-header
+              h2.h2.section-header__title Gallery
+        +swiper("swiper-gallery", "sliderGallery")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-1.jpg", alt="")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-2.jpg", alt="")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-3.jpg", alt="")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-1.jpg", alt="")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-1.jpg", alt="")
+          .swiper-slide
+            .gallery-image
+              img(src="img/image-content/gallery-1.jpg", alt="")

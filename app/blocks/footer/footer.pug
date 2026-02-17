@@ -1,0 +1,39 @@
+footer.footer(data-lock-scroll)
+  section.section.footer__section
+    .container.footer__container
+      .footer__top
+        +logo("logo.png")(class="footer__logo")
+
+        nav.footer__nav
+          ul.footer__list
+            li.footer__item
+              a.footer__link(href="/about.html") About company
+
+          ul.footer__list
+            li.footer__item
+              a.footer__link(href="/products.html") Product
+            li.footer__item
+              a.footer__link(href="/products-soft.html") Soft
+            li.footer__item
+              a.footer__link(href="/products-scanner.html") The scanner
+
+          ul.footer__list
+            li.footer__item
+              a.footer__link(href="/blog.html") Publications
+            li.footer__item
+              a.footer__link(href="/articles.html") Articles
+            li.footer__item
+              a.footer__link(href="/reports.html") Reports
+
+        +button({
+          button: true,
+          text: 'Contact Us',
+          class: 'footer__button button--primary',
+          "data-modal-open": "callback"
+        })
+
+      .footer__bottom
+        p.footer__copyright
+          | © All rights reserved. Evfinder 2010–2025.
+          br
+          | The site is not a public offer

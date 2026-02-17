@@ -1,0 +1,53 @@
+.h1, .h2, h3, h4, h5 {
+  font-family: $font-secondary;
+}
+.h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 124%;
+  text-transform: uppercase;
+  @include media(max, 991) {
+    font-size: 40px;
+  }
+  @include media(max, 767) {
+    font-size: 36px;
+  }
+}
+.h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 100%;
+  text-transform: uppercase;
+  @include media(max, 991) {
+    font-size: 36px;
+  }
+  @include media(max, 767) {
+    font-size: 32px;
+  }
+}
+
+.h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  @include media(max, 767) {
+    font-size: 20px;
+  }
+}
+.h4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+  @include media(max, 767) {
+    font-size: 20px;
+  }
+}
+
+p a {
+  text-decoration: underline;
+  transition: color $transition;
+  @include hover {
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,44 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .page
+      section.section
+        .container
+          .section-header
+            h1.h2.section-header__title Contacts
+          .contacts
+            .wrapper.contacts__wrapper
+              +contactsCard({
+                title: 'North America partner',
+                description: 'Leeds Precision Instruments, Inc., d/b/a Leeds Forensics Systems, Inc.',
+                address: '17300 Medina Road, Suite 600 Minneapolis, MN 55447 USA',
+                phones: [
+                  '+1-763-398-7136',
+                  '+1-763-546-8575'
+                ],
+                emails: ['nschrode@leedsmicro.com']
+              })
+              +contactsCard({
+                title: 'Portugal partner',
+                description: 'ScannBI Technology Europe Unip Lda',
+                address: 'Rua Jaime Cortesão 186, 4440-662 Valongo, Portugal',
+                phones: [
+                  '+351 224 222 589',
+                  '+351 916 587 539'
+                ],
+                emails: ['m.schrodel@evofinder.com']
+              })
+              +contactsCard({
+                title: 'Germany partner',
+                description: 'ScannBI Technology Service GmbH',
+                address: 'Sandstrasse 17-23, 23552 Lübeck, Germany',
+                phones: [
+                  '+49(0) 451 707 80 447',
+                  '+49(0) 173 762 84 86'
+                ],
+                emails: [
+                  'scannbi_service@evofinder.com',
+                  'scannbi_spb@evofinder.com'
+                ]
+              })
+

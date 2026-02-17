@@ -1,0 +1,36 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page.page-blog-detail
+    section.section.section--main
+      +banner({
+        media: {
+          type: 'image',
+          src: 'img/image-content/banner-blog-detail.jpg'
+        },
+        title: 'Reproducibility of Ballistic Marks with Evofinder®',
+        subtitle: 'A study of 1,625 cartridge cases fired from five pistols shows that Evofinder® consistently identifies matching marks, proving its reliability over 3,000+ shots',
+      })
+    section.section.blog-detail
+      .container
+        .blog-detail__heading
+          span.blog-detail__date From 12/10/2017
+
+        .blog-detail__content.wrapper
+          .blog-detail__col
+            h2.blog-detail__subtitle.h2 Reproducibility of Ballistic Marks with Evofinder®
+            p “Reproducibility of characteristic marks on fired cartridge cases from five Chinese Norinco QSZ-92 9 × 19 mm pistols over the course of 3070 shots is addressed using an Evofinder® system. The first 20 cartridges are all studied, while one random sample out of every ten consecutively fired cartridge cases is studied for the rest 3050 rounds.
+            p As such, a total of 325 cartridges are entered into the system for each pistol and a database consisting of 1625 cartridges from five pistols is established in this paper. Both onscreen examination and automatic correlation are used to examine the reproducibility. In the onscreen examination process, it is possible for firearm examiners to positively identify the first cartridge to the 500th, 1000th, 1500th, 2000th, 2500th, 3000th, 3070th cartridge. In the automatic correlation process, the first cartridge of each firearm is separately performed correlation against the database.
+
+          .blog-detail__col
+            .blog-detail__media
+              img(src="img/image-content/blog-1.jpg", alt="")
+            p  It is found that the similarity score for match objects changes slightly as the shot number increases, indicating slight variations of marks. However, these variations have not prohibited the Evofinder® system to make correct correlation and rank 100% of the known match objects on the top of the correlation list by either firing pin impression or breech face mark. Thus, the reproducibility is proved statistically and objectively in this paper.”
+
+        .blog-detail__source
+          span.blog-detail__source-label Source:
+          p
+            | Kafeng Zhang, Yaping Luo, Peng Zhou, Reproducibility
+            | characteristic marks on fired cartridge cases from five
+            | Chinese Norinco QSZ-92 9 × 19 mm pistols, Forensic Science
+            | International, Volume 278, September 2017, Pages 78–86.

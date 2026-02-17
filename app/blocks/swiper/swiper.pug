@@ -1,0 +1,16 @@
+mixin swiper(className, swiperData)
+  .swiper(class=className data-swiper=swiperData)
+    .swiper-container
+      .swiper-wrapper
+        block
+
+    .swiper-pagination(data-swiper-pagination)
+
+    .swiper-button-wrapper
+      .swiper-button-prev(data-swiper-button-prev)
+        svg(width="17" height="30")
+          use(href="#icon-arrow-btn")
+      .swiper-button-next(data-swiper-button-next)
+        svg(width="17" height="30")
+          use(href="#icon-arrow-btn")
+

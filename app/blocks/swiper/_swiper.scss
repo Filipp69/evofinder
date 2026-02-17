@@ -1,0 +1,100 @@
+.swiper {
+  position: relative;
+  @include media(max, 1480) {
+    overflow: visible;
+  }
+}
+
+.swiper-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  @include media(max, 1480) {
+    overflow: visible;
+    padding-bottom: 43px;
+  }
+  @include media(max, 991) {
+    max-width: 538px;
+  }
+  @include media(max, 540) {
+    max-width: 270px;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.swiper-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  @include media(max, 1480) {
+    display: none;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 120px;
+  margin: 0;
+  background-color: $color-card-bg;
+  border-radius: 100px;
+  transition: background-color $transition;
+  pointer-events: all;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    svg {
+      color: $color-white;
+    }
+  }
+  & svg {
+    color: $color-primary;
+    transition: color $transition;
+  }
+}
+
+.swiper-button-prev {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-pagination {
+  display: none;
+  bottom: 0 !important;
+  @include media(max, 1480) {
+    display: block;
+  }
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: $color-grey-dark;
+    margin: 0 5px !important;
+    opacity: 1;
+    transition: color $transition;
+    pointer-events: none;
+    &.swiper-pagination-bullet-active {
+      background-color: $color-primary;
+    }
+  }
+}

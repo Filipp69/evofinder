@@ -1,0 +1,66 @@
+.burger {
+  display: none;
+  z-index: 1;
+  width: 46px;
+  height: 34px;
+  margin-left: 26px;
+  position: relative;
+  cursor: pointer;
+  transition: $transition;
+
+  @include hover {
+    color: $color-primary-dark;
+  }
+
+  @include media(max, 991) {
+    display: block;
+  }
+
+  @include media(max, 767) {
+    margin-left: 0;
+    width: 34px;
+    height: 24px;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $color-primary;
+    transition: transform $transition, opacity $transition, background-color $transition;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &--open {
+    span {
+      &:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(35.5deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-35.5deg);
+      }
+    }
+  }
+}
+

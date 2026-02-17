@@ -1,0 +1,55 @@
+include ../logo/logo.pug
+include ../nav/nav.pug
+
+header.header(data-lock-scroll)
+  .container.header__container
+      +logo("logo.png")(class="header__logo")
+      +nav([
+        { title: "About us", href: "/about.html" },
+        {
+            title: "Product",
+            href: "/products.html",
+            sub: [
+                { title: "Evofinder software", href: "/products-soft.html" },
+                { title: "Evofinder scanner", href: "/products-scanner.html" },
+            ]
+        },
+        {
+            title: "Publications",
+            href: "/blog.html",
+            sub: [
+                { title: "Articles", href: "/articles.html" },
+                { title: "Reports", href: "/reports.html" },
+            ]
+        },
+        { title: "Contacts", href: "/contacts.html" },
+      ])(class="header__nav")
+      .header__search-btn
+        svg(width="22" height="22")
+          use(href="#icon-search")
+      .inputholder.header__inputholder-search
+        input.inputholder__input.header__search(type="text" placeholder="Search" data-required="")
+        svg.header__search-icon(width="20" height="20")
+          use(href="#icon-search")
+        svg.header__cross-icon(width="22" height="22")
+          use(href="#icon-cross")
+        .search-result
+          .search-result__wrapper.custom-scroll
+            span(style="display: none;") По вашему запросу ничего не найдено
+            a.search-result__item(href="#")
+              .search-result__title Search result title
+              .search-result__category Serach result text
+            a.search-result__item(href="#")
+              .search-result__title Search result title
+              .search-result__category Serach result text
+            a.search-result__item(href="#")
+              .search-result__title Search result title
+              .search-result__category Serach result text
+            a.search-result__item(href="#")
+              .search-result__title Search result title
+              .search-result__category Serach result text
+            a.search-result__item(href="#")
+              .search-result__title Search result title
+              .search-result__category Serach result text
+      include ../burger/burger.pug
+
